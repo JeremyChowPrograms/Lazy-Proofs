@@ -1,0 +1,16 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\title{Squeeze Theorem $\delta\varepsilon$ Lazy Proof}
+\author{Jeremy Chow}
+\date{10/23/18}
+
+\begin{document}
+\maketitle
+The squeeze theorem stated that $a(x)\leq b(x) \leq c(x)$, $\lim\limits_{x \to k}a(x)=L  $ and $\lim\limits_{x \to k}c(x)=L $, then $\lim\limits_{x \to k}b(x)=L $. In order to prove this theorem, we need to show that for any $\varepsilon>0$, there exists $\delta>0$ such that $0<|x-k|<\delta$ implies $|b(x)-L|<\varepsilon$. \\Given by the situation,\\ $|a(x)-L|<\varepsilon$ for $\delta_{1}$ and\\ $|c(x)-L|<\varepsilon$ for $\delta_{2}$.\\ Let $\delta^*>\max\{\delta_{1},\delta_{2}\}$ so both statements holds true.\\ The lowest that $a(x)$ will be is given by $L-a(x)<\varepsilon$, $L-\varepsilon<a(x)$.\\ The highest that $c(x)$ will be is given by $c(x)-L<\varepsilon$, $c(x)<L+\varepsilon$.\\ So we have\\ $L-\varepsilon<a(x)\leq b(x) \leq c(x)<L+\varepsilon$,\\ $L-\varepsilon<b(x)<L+\varepsilon$,\\ which can be rewritten as\\ $|b(x)-L|<\varepsilon$.\\ Hence, by the $\delta\varepsilon$ definition of sequence convergence, $\lim\limits_{x \to k}b(x)\to L$ if $a(x)\leq b(x) \leq c(x)$, $\lim\limits_{x \to k}a(x)\to L  $ and $\lim\limits_{x \to k}c(x)\to L$. QED
+
+\end{document}
