@@ -1,0 +1,16 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\title{Derivative Lazy Proofs}
+\author{Jeremy Chow}
+\date{10/23/18}
+
+\begin{document}
+\maketitle
+Here are some proofs or rules useful in taking derivatives\\Addition Rule\\
+$y=f(x)+g(x)\\y'=\lim\limits_{\Delta x \to 0} \frac{f(x+\Delta x)+g(x+\Delta x)-f(x)-g(x)}{\Delta x}\\y'=\lim\limits_{\Delta x \to 0} \Big( \frac{f(x+\Delta x)-f(x)}{\Delta x}+\frac{g(x+\Delta x)-g(x)}{\Delta x} \Big )\\y'=f'(x)+g'(x)$\\Constant Multiplier\\$y=kf(x)\\y'=\lim\limits_{\Delta x \to 0} \frac{kf(x+\Delta x)-kf(x)}{\Delta x}\\y'=k\lim\limits_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}\\y'=kf'(x)$\\Power Rule\\$y=x^n\\y'=\lim\limits_{\Delta x \to 0} \frac{(x+\Delta x)^n-x^n}{\Delta x}\\y'=\lim\limits_{\Delta x \to 0} \frac{nx^{n-1}\Delta x+C_{2}^nx^{n-2}\Delta x^2+\dotsb+\Delta x^n}{\Delta x}\\y'=\lim\limits_{\Delta x \to 0} \Big ( nx^{n-1}+\Delta x(C_{2}^nx^{n-2}+\dotsb+\Delta x^{n-2})\Big )\\y'=nx^{n-1}$\\Quotient Rule\\$y=\frac{f(x)}{g(x)}\\y'=\lim\limits_{\Delta x \to 0} \frac{\frac{f(x+\Delta x)}{g(x+\Delta x)}-\frac{f(x)}{g(x)}}{\Delta x}\\y'=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)g(x)-f(x)g(x+\Delta x)}{\Delta xg(x)g(x+\Delta x)}\\y'=\lim\limits_{\Delta x \to 0}\Big(\frac{1}{g(x)g(x+\Delta x)}*\frac{f(x+\Delta x)g(x)-g(x)f(x)+g(x)f(x)-f(x)g(x+\Delta x)}{\Delta x}\Big)\\y'=\lim\limits_{\Delta x \to 0}\Big(\frac{1}{g(x)g(x+\Delta x)}\Big)*\lim\limits_{\Delta x \to 0}\Big(\frac{f(x+\Delta x)g(x)-g(x)f(x)+g(x)f(x)-f(x)g(x+\Delta x)}{\Delta x}\Big)\\y'=\frac{1}{g(x)^2}\lim\limits_{\Delta x \to 0}\Big(\frac{g(x)(f(x+\Delta x)-f(x))}{\Delta x}-\frac{f(x)(g(x+\Delta x)-g(x))}{\Delta x}\Big)\\y'=\frac{1}{g(x)^2}\Big(g(x)\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}-f(x)\lim\limits_{\Delta x \to 0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\Big)\\y'=\frac{g(x)f'(x)-f(x)g'(x)}{g(x)^2}$\\Chain Rule\\$y=f(g(x))\\y'=\lim\limits_{x \to a} \frac{f(g(x))-f(g(a))}{x-a}\\y'=\lim\limits_{x \to a}\Big( \frac{f(g(x))-f(g(a))}{g(x)-g(a)}*\frac{g(x)-g(a)}{x-a}\Big)$\\Let $u=g(x)$, and $a'=g(a)$\\$y'=\lim\limits_{x \to a} \frac{g(x)-g(a)}{x-a}*\lim\limits_{u \to a'} \frac{f(u)-f(a')}{u-a}\\y'=f'(u)*g'(x)\\y'=f'(g(x))*g'(x)$
+\end{document}
